@@ -6,6 +6,7 @@
     transform: translateX(50px);
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 
     &__icon {
         background-color: #000;
@@ -28,9 +29,6 @@
             fill: #fff;
         }
     }
-    // &__icon:before {
-    //     content: "&";
-    // }
 }
 
 .Show {
