@@ -19,7 +19,7 @@ class BackTop extends React.Component {
         const h = window.innerHeight
         const startScroll = window.scrollY;
 
-        if(startScroll > h -50) {
+        if(startScroll > h - 100) {
             this.setState({scrollToTop :false})
         }else {
             this.setState({scrollToTop :true})
