@@ -1,5 +1,42 @@
-.Contact {
-    height: 600px;
+@import "../../../sass/abstracts/mixins";
+
+.contact {
+    height: 500px;
     background-color: #f0f0f0;
 
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__photo {
+        width: 100%;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    &__myphoto {
+        width: 100px;
+        height: 100px;
+        background: #777;
+        border-radius: 50%;        
+        display: inline-block;
+        
+    }
+    &__content {
+        font-size: 1.8rem;
+        margin-top: 60px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        & span {
+            border-left: 1px solid #C8C8C8;
+            margin-left: 9px;
+            padding-left: 6px;
+            color: #777;
+        }
+    }
 }

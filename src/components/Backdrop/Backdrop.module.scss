@@ -1,0 +1,74 @@
+.backdrop{
+    width: 100%;
+    position: fixed;
+    z-index: 6000;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,255,255,1);
+    opacity: 0;
+    transform: scale(0.01);
+    transition: all 0.4s ease-in-out;
+    overflow-y: scroll;
+    top: 0; right: 0; bottom: 0; left: 0; 
+
+    &__icon {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 32px;
+        height: 32px;
+        opacity: 0.3;
+        cursor: pointer;
+        display: block;
+
+        &:hover {
+            opacity: 1;
+        }
+        &:before, &:after {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 33px;
+            width: 2px;
+            background-color: #333;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__content {
+        width: 100%;
+        background: rgba(255,255,255, .95);
+        margin-top: 100px;
+        font-size: 1.6rem;
+        min-height: 900vh;
+    }
+
+    // & div {
+    //     margin: 15vh auto;
+    //     width: 80%;
+    //     max-width: 650px;
+    //     padding: 30px;
+    //     min-height: 200vh;
+    //     background: rgba(255,255,255, .95);
+    // }
+}
+
+.open {
+    width: 100%;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.close {
+    width: 1px;
+    opacity: 0;
+    transform: scale(0.1);
+}
+
+.noscroll { overflow: hidden; }
+

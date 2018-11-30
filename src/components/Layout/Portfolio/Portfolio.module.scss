@@ -1,5 +1,77 @@
-.Portfolio {
-    height: 600px;
+@import "../../../sass/abstracts/mixins";
 
-   
+.portfolio {
+    height: auto;
+    //margin-bottom: 80px;
+    margin: 0 auto 80px auto;
+
+    &__title{
+        @include sectionTitle;
+    }
+
+    &__category{
+        font-size: 1.4rem;
+        font-weight: 800;
+        width: 100%;
+        margin-bottom: 20px;
+        color: #C8C8C8;
+        word-spacing: 5px;
+        
+        &__items {
+            width: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;   
+        }
+        &__item {
+            display: inline-block;
+            padding: 0 10px 10px 10px;
+            margin-left: 15px;
+            cursor: pointer;
+
+            &:active, &:hover {
+                color: #202020;
+            }
+        }
+        &__active {
+            color: #202020;
+        }
+    }
+    &__list {
+        &__items{
+            list-style: none;
+            width: 100%;
+            position: relative;
+            //display: flex;
+            //flex-wrap: wrap;
+            //justify-content: center;
+        }
+        &__item{
+            display: inline-block;
+            width: 320px;
+            height: 280px;
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+
+            &__1 {
+                left: 33.333%;
+            }
+            &__2 {
+                left: 66.666%;
+            }
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            &__hide {
+                transform: scale(0);
+                position: absolute;
+                top: 0;
+                left: 0;
+                //transform: translateX(-100%);
+            }
+        }
+    }
 }

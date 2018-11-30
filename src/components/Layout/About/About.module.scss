@@ -1,17 +1,14 @@
+@import "../../../sass/abstracts/mixins";
+
 .About {
     height: 600px;
     width: 100%;
     font-size: 2rem;
 
     &__title {
-        font-size: 3.2rem;
-        font-weight: 600;
-        text-align: center;
-        padding-top: 30px;
-        color: #505050;
+        @include sectionTitle;
     }
     &__content {
-        margin-top: 30px;
         display: flex;
         justify-content: center;
     }

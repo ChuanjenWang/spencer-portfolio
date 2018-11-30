@@ -11,12 +11,7 @@ import Contact from './components/Layout/Contact/Contact';
 
 class App extends Component {
   render() {
-    const HomeStyle = {
-      height: '900px',
-      background: 'orange',
-      textAlign: 'center',
-      paddingTop: '68px'
-    }
+    
     return (
       <div className="App">
         <Layout>  

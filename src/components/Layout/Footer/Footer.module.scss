@@ -1,0 +1,47 @@
+.footer {
+    background-color: #000;
+    width: 100%;
+    height: 80px;
+    color: #fff;
+
+    &__content {
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+        padding: 40px 0 10px 0;
+        color: #f0f0f0;
+        position: relative;
+    }
+
+    &__copryright{
+        text-align: center;
+    }
+
+    &__iconList{ 
+        position: absolute;
+        right: 60px;
+        bottom: 6px;
+    }
+
+    &__icon{ 
+        margin-right: 20px;
+        cursor: pointer;
+
+        & svg {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            stroke-width: 0;
+            stroke: #fff;
+            fill: #fff;
+    
+            &:after {
+                padding-right: 2rem;
+            }
+    
+            &:hover {
+                fill: #777;
+            }
+        }
+    }
+}

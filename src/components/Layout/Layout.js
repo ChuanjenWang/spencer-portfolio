@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BackTop  from '../BackTop/BackTop';
-//import Header from '../Header/Header';
+import Footer from '../Layout/Footer/Footer';
 
 const Layout = (props) => (
     <div>
@@ -9,6 +9,7 @@ const Layout = (props) => (
         <div>
             {props.children}
         </div>
+        <Footer />
     </div>
 )
 
