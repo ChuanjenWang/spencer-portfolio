@@ -17,7 +17,11 @@
     &__myphoto {
         width: 100px;
         height: 100px;
-        background: #777;
+        background: #e5e0d4 ;
+        background-image: url('../../../images/spencer.png'); 
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
         border-radius: 50%;        
         display: inline-block;
         

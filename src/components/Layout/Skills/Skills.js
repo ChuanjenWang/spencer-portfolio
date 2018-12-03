@@ -10,29 +10,29 @@ const Skills = () => (
         <div className={classes.Skills__list}>
             <ul>
                 <li>
-                    <Card title="Frontend">React, Redux, Html 5, CSS, SASS</Card>
+                    <Card icon="frontend" title="Frontend">React, Redux, Jest, Enzyme, Javascript, jQuery, HTML, CSS, Sass, RWD design</Card>
                 </li>
                 <li>
-                    <Card title="Backend">NodeJs, Express, C#, .NET MVC </Card>
+                    <Card icon="backend" title="Backend">Node.js, Express, C#, .NET MVC, RESTful API design </Card>
                 </li>
                 <li>
-                    <Card title="Databse">NodeJs, Express, C#, .NET MVC </Card>
+                    <Card icon="database" title="Databse">MangoDB, My SQL, SQL Sevrver, Oracle, DB2</Card>
                 </li>
                 <li>
-                    <Card title="Tools">NodeJs, Express, C#, .NET MVC </Card>
+                    <Card icon="tools" title="Tools">Git, VS Code, Sketch</Card>
                 </li>
                 <li>
-                    <Card title="Brand">NodeJs, Express, C#, .NET MVC </Card>
+                    <Card icon="media" title="Media Markering">SEO, Google analytics </Card>
                 </li>
                 <li>
+                    <Card icon="project" title="Poject Management">scrum methodology, gantt chart </Card>
+                </li>
+                {/* <li>
                     <Card title="Poject Management">NodeJs, Express, C#, .NET MVC </Card>
                 </li>
                 <li>
                     <Card title="Poject Management">NodeJs, Express, C#, .NET MVC </Card>
-                </li>
-                <li>
-                    <Card title="Poject Management">NodeJs, Express, C#, .NET MVC </Card>
-                </li>
+                </li> */}
             </ul>
         </div>
         </div>

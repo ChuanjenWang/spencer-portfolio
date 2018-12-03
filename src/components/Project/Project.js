@@ -3,8 +3,8 @@ import React from 'react';
 import classes from './Project.module.scss';
 
 const Project = (props) => { 
-    console.log("props.sort:" + props.sort);
-    console.log("props.filter:" + props.filter);
+    //console.log("props.sort:" + props.sort);
+    //console.log("props.filter:" + props.filter);
 
     const projectClass = (props.filter === 'a') ? [classes.project] 
                          : (props.sort !== props.filter) ? [classes.project, classes.project__hide]

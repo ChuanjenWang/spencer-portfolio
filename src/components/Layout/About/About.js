@@ -13,22 +13,18 @@ const About = () => (
                 <div className={classes.About__right}>
                     <div className={classes.About__description}>
                         <p>
-                        Hi! I'm Spencer Wang (Chuanjen). I have experienced in Web / Visual Design 
-                        for more than 6 years and participated in many high quality projects.
-                        I fell comfortable working in a team or individually and have 
-                        an in-depth understanding of emerging technologies.
+                        Hi! I'm Spencer Wang (Chuanjen). I have more than 10 yeaers as a full-stack engineer in airlines, 
+                        e-commerce, travel, financial, and medical industries. 
                         </p>
                         <p>
-                        Hi! I'm Spencer Wang (Chuanjen). I have experienced in Web / Visual Design 
-                        for more than 6 years and participated in many high quality projects.
-                        I fell comfortable working in a team or individually and have 
-                        an in-depth understanding of emerging technologies.
+                        I have rich experience in web app development with frontend, backend, RESTful API, and database.
+                        In additon, I have strong business sense in e-commerce, supply chain management, customer relationship management, B2B services, content management applicaion. 
+                        I love to use technology and data to slove business proplems.
                         </p>
                         <p>
-                        Hi! I'm Spencer Wang (Chuanjen). I have experienced in Web / Visual Design 
-                        for more than 6 years and participated in many high quality projects.
-                        I fell comfortable working in a team or individually and have 
-                        an in-depth understanding of emerging technologies.
+                        Currently, I am fascinated by hot front-end technology. As you can see, this page is developed with React.
+                        Morevoer, I'm using react to clone some famous online services, which you can find some of them in this page.    
+                        If you have any questions or opportunities, please don't hesitate to contact me :)   
                         </p>
                     </div>
                 </div>

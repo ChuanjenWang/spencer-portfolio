@@ -11,16 +11,68 @@
     transition: all 0.3s ease-in-out;
     
     &:hover {
-         transform: translateY(-7px);
+         transform: translateY(-8px);
          box-shadow: 0px 9px 15px 0px rgba(0, 0, 0, 0.2);
+         
+         .card__iconsrc {
+            & svg {
+                stroke: #fff;
+                fill: #fff;
+            }
+         }
+         .card__iconmask {
+            background: #000;
+            transform: scale(1);
+            opacity: 1;
+         }
     }
-
     &__icon {
         margin: 20px auto;
         width: 80px;
         height: 80px;
+        position: relative;
+    }
+
+    &__iconsrc {
+        z-index: 100;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 80px;
+        height: 80px;
+
+        & svg {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            stroke-width: 0;
+            stroke: #000;
+            fill: #000;
+            margin-top: 20px;
+        }
+    }
+
+    &__iconmain {
         background: #eee;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
+    }
+    &__iconmask {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        transform: scale(.1);
+        transition: transform 0.3s ease-in, opacity 0.25s ease-in 0.1s;  
+        opacity: 0;
+        z-index: 50;
+        background: #000;
     }
 
     &__title {
@@ -35,3 +87,5 @@
         color: #797979;
     }
 }
+
+ 
