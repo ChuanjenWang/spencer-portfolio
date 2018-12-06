@@ -41,7 +41,7 @@ class Portfolio extends React.Component {
             {"type": "Work", "desc": "Corporate Member Website", "no":"CRP", "sort": "w"},
             {"type": "Work", "desc": "Corporate Member CMS", "no":"CRPS", "sort": "w"},
             {"type": "Side Project", "desc": "Youtube Clone", "no":"YTC", "sort": "s"},
-            {"type": "Word", "desc": "Supply Chain Management", "no":"TSC", "sort": "w"}
+            {"type": "Work", "desc": "Supply Chain Management", "no":"TSC", "sort": "w"}
         ]
         const projectListContent = (
             projectListData.map((item, i) => {
