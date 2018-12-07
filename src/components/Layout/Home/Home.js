@@ -9,7 +9,11 @@ const Home = () => (
             <div className={classes.Home__MainBox}>
                 <div className={classes.Home__Content}>
                     <h1>Spencer Wang</h1>
-                    <h3>Full Stack Engineer - Web Developer - Project Manager</h3>
+                        <h3>
+                            <span>Full Stack Engineer - </span>
+                            <span>Web Developer - </span>
+                            <span>Project Manager</span>
+                        </h3>
                     <div className={classes.Home__Content__IconList}>
                         <span className={classes.Home__Content__Icon}>
                             <a href="https://www.linkedin.com/in/chuanjenwang/" rel="noopener noreferrer" target="_blank">
