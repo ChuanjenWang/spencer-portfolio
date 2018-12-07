@@ -12,18 +12,14 @@
 
     &__list{
         text-align: center;    
-
-        & ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            & li {
-                margin: 15px 15px;
-            }
-        }
     }
 }
+.Row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+}
+
