@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Home.module.scss';
-import Navbar from '../../Navbar/Navbar';
+import Navbar from '../../UI/Navbar/Navbar';
 const Home = () => (
     <section id="home">
         <Navbar />

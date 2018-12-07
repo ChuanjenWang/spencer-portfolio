@@ -19,6 +19,23 @@
     color: #505050;
     margin-bottom: 25px;
 }
+@mixin container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+
+    @include respond(phone) { 
+        
+    }
+    @include respond(tab-land) { 
+        width: 1170px;
+    }
+    @include respond(big-desktop) { 
+        width: 1770px;
+    }
+}
 
 //MEDIA QUERY MANAGER
 /*
