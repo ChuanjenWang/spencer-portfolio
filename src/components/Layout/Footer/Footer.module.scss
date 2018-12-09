@@ -1,8 +1,10 @@
 .footer {
     background-color: #000;
     width: 100%;
-    height: 80px;
+    height: auto;
     color: #fff;
+    //margin-bottom: 20px;
+    padding-bottom: 20px;
 
     &__content {
         width: 100%;
@@ -15,12 +17,14 @@
 
     &__copryright{
         text-align: center;
+        
     }
 
     &__iconList{ 
-        position: absolute;
-        right: 60px;
-        bottom: 6px;
+        margin-bottom: 15px;
+        //position: absolute;
+        //right: 60px;
+        //bottom: 6px;
     }
 
     &__icon{ 

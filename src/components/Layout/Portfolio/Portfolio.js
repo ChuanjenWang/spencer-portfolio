@@ -1,9 +1,9 @@
 import React from 'react';
 
 import classes from './Portfolio.module.scss';
-import Project from '../../Project/Project';
+import Project from  '../../UI/Project/Project';
 import Backdrop from '../../Backdrop/Backdrop';
-import ProjectDetail from '../../Project/ProjectDetail/ProjectDetail';
+import ProjectDetail from '../../UI/ProjectDetail/ProjectDetail';
 
 class Portfolio extends React.Component {
     state = {
@@ -46,11 +46,11 @@ class Portfolio extends React.Component {
         const projectListContent = (
             projectListData.map((item, i) => {
                 return (
-                    <li key={i} className={ this.state.sort === 'a' ? listItemClass 
+                    <div key={i} className={ this.state.sort === 'a' ? listItemClass 
                                             : this.state.sort === item.sort ? listItemHideClass
                                             : listItemClass } >
                         <Project {...item} click={this.openBackdropHandler} filter={this.state.sort}/>
-                    </li>
+                    </div>
                 )
             })
         )
@@ -62,7 +62,7 @@ class Portfolio extends React.Component {
                           <ProjectDetail project={this.state.project}></ProjectDetail>
                 </Backdrop>
                 <div className="container">
-                <div className={classes.portfolio__title}>Portfolio</div>
+                    <div className={classes.portfolio__title}>Portfolio</div>
                     <div className={classes.portfolio__category}>
                         <ul className={classes.portfolio__category__items}>
                             <li className={this.state.activeIndex === 0 ? categoryActiveClass.join(' ') 
@@ -77,9 +77,14 @@ class Portfolio extends React.Component {
                         </ul>
                     </div>
                     <div className={classes.portfolio__list}>
-                        <ul className={classes.portfolio__list__items}> 
+                        {/* <ul className={classes.portfolio__list__items}> 
                             {projectListContent}
-                        </ul>
+                        </ul> */}
+                        <div className={classes.Row}>
+                          
+                            {projectListContent}
+                          
+                        </div>
                     </div>
                 </div>
             </section>

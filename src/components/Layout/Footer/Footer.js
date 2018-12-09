@@ -5,7 +5,6 @@ import classes from './Footer.module.scss';
 const Footer = () => (
     <footer className={classes.footer}>
         <div className={classes.footer__content}>
-            <div className={classes.footer__copyright}>2018 © Spencer Wang. All rights reserved.</div>
             <div className={classes.footer__iconList}>
                         <span className={classes.footer__icon}>
                             <a href="https://www.linkedin.com/in/chuanjenwang/" rel="noopener noreferrer" target="_blank">
@@ -32,7 +31,8 @@ const Footer = () => (
                         </svg>
                         </a>
                         </span>
-                    </div>
+            </div>
+            <div className={classes.footer__copyright}>2018 © Spencer. All rights reserved.</div>
         </div>
     </footer>
 )
