@@ -1,10 +1,69 @@
 import React from 'react';
+import ImageGallery from 'react-image-gallery';
 
 import classes from './ProjectDetail.module.scss';
 
 class ProjectDetail extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            showFullscreenButton: false,
+            showGalleryFullscreenButton: false,
+            showPlayButton: false,
+            showIndex: true,
+            showThumbnails: false
+        }
+    }
+    
     renderContentHander = (project) => {
+        const CRPimages = [
+            {
+                original: require('../../../images/crp.jpg')
+            },
+            {
+                original: require('../../../images/crp_p1.jpg')
+            },
+            {
+                original: require('../../../images/crp_p2.jpg')
+            },
+            {
+                original: require('../../../images/crp_p3.jpg')
+            }
+        ]
+        const CRPSimages = [
+            {
+                original: require('../../../images/crps1.PNG')
+            },
+            {
+                original: require('../../../images/crps2.PNG')
+            },
+            {
+                original: require('../../../images/crps3.PNG')
+            }
+        ]
+        // const YTCimages = [
+        //     {
+        //         original: require('../../../images/crp.JPEG')
+        //     },
+        //     {
+        //         original: require('../../../images/crp.JPEG')
+        //     },
+        //     {
+        //         original: require('../../../images/crp.JPEG')
+        //     }
+        // ]
+        // const TSCimages = [
+        //     {
+        //         original: require('../../../images/crp.JPEG')
+        //     },
+        //     {
+        //         original: require('../../../images/crp.JPEG')
+        //     },
+        //     {
+        //         original: require('../../../images/crp.JPEG')
+        //     }
+        // ]
         switch (project) {
             case "GWC":
                 return (
@@ -20,7 +79,14 @@ class ProjectDetail extends React.Component {
                         <p>Built with jQuery, Javascript, Sass, .NET Web API, C# and DB2.
                         This website developed for more than 100,000 China Airlines's corporate members worldwide. As a full-stack engineer and project manager in this project.</p>
                         <div className={classes.porjectDetail__imgbox}>
-                            <img src={require('../../../images/crp.png')} alt="CRP" /> 
+                            <ImageGallery items={CRPimages}
+                                          showBullets={this.state.showBullets}
+                                          showFullscreenButton={this.state.showFullscreenButton}
+                                          showPlayButton={this.state.showPlayButton}
+                                          showThumbnails={this.state.showThumbnails}
+                                          showNav={this.state.showNav}
+                                          showIndex={this.state.showIndex}
+                                        />
                         </div>
                         <h1>About this project</h1>
                         <p>This web app is developed for China Airlines's corporate member, 
@@ -28,7 +94,7 @@ class ProjectDetail extends React.Component {
                         </p>
                         <div>
                             <ul>
-                                <li>Accounce the member rewards porgram and the latest news.</li>
+                                <li>Member rewards porgram description and the latest news.</li>
                                 <li>Online registration to become a member of China Airlines.</li>
                                 <li>Query historical flight records.</li>
                                 <li>Query accumulated mileage and points.</li>
@@ -38,24 +104,22 @@ class ProjectDetail extends React.Component {
                         </div>
                         <p>
                             In this porject, erverything are developed from scratch to meet business requirements.
-                            As a full-stack engineer and proejct owner, I'm responsible for the development of the front-end page
-                            as well as the backend api. I also work as a project mananger to manage project progress and resource allocation.
+                            As a full-stack engineer and project owner, I'm responsible for the development of the front-end page
+                            as well as the backend API. I also work as a project mananger to manage project progress and resource allocation.
                         </p>
                         <h1>Technical Sheet</h1>
                        
                         <ul>
-                            <li>
-                                Frontend - jQuery, HTML, Sass, CSS 
-                            </li>
-                            <li>
-                                Backend - .NET Web API, .NET MVC, C#
-                            </li>
-                            <li>
-                                Database - DB2, Oracle
-                            </li>
-                            <li>
-                                Responsive website design
-                            </li>
+                            <li>jQuery</li>
+                            <li>Sass</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>.NET Web API</li>
+                            <li>.NET MVC</li>
+                            <li>C#</li>
+                            <li>DB2</li>
+                            <li>Oracle</li>
+                            <li>Responsive website design</li>
                         </ul>
                        
                         <h1>Resuorce</h1>
@@ -71,7 +135,15 @@ class ProjectDetail extends React.Component {
                         <p>Built with React, Redux, Sass, .NET Web API, C# and DB2.
                         This website developed for China Airlines's employee to maintain member profile and web page content. As a full-stack engineer and project manager in this project.</p>
                         <div className={classes.porjectDetail__imgbox}>
-                            <img src={require('../../../images/crps.PNG')} alt="CRPS" /> 
+                            <ImageGallery items={CRPSimages}
+                                          showBullets={this.state.showBullets}
+                                          showFullscreenButton={this.state.showFullscreenButton}
+                                          showPlayButton={this.state.showPlayButton}
+                                          showThumbnails={this.state.showThumbnails}
+                                          showNav={this.state.showNav}
+                                          showIndex={this.state.showIndex}
+                                        />
+                            {/* <img src={require('../../../images/crps.PNG')} alt="CRPS" />  */}
                         </div>
                         <h1>About this project</h1>
                         <p>This web app is developed for China Airlines's corporate program managers, 
@@ -89,18 +161,17 @@ class ProjectDetail extends React.Component {
                         </div>
                         <h1>Technical Sheet</h1>
                        <ul>
-                           <li>
-                               Frontend - React, Redux, CSS Module, Sass, Bootstrap
-                           </li>
-                           <li>
-                               Backend - .NET Web API, .NET MVC, C#
-                           </li>
-                           <li>
-                               Database - DB2, Oracle
-                           </li>
-                           <li>
-                               Responsive website design
-                           </li>
+                           <li>React</li>
+                           <li>Redux</li>
+                           <li>CSS Module</li>
+                           <li>Sass</li>
+                           <li>Bootstrap</li>
+                           <li>.NET Web API</li>
+                           <li>.NET MVC</li>
+                           <li>C#</li>
+                           <li>DB2</li>
+                           <li>Oracle</li>
+                           <li>Responsive website design</li>
                        </ul>
                     </div>
                 )
@@ -110,10 +181,10 @@ class ProjectDetail extends React.Component {
                         <h1>Youtube Clone </h1><span className={classes.porjectDetail__period}>Sep 2018 - Nov 2018</span>
                            <p>Built with React, Redux, Sass, and CSS Module.</p>
                         <div className={classes.porjectDetail__imgbox}>
-                                <img src={require('../../../images/ytc.png')} alt="youtube clone" /> 
+                                <img src={require('../../../images/ytc.jpg')} alt="youtube clone" /> 
                         </div>
                             <h1>About this project</h1>
-                            <p>The main idea of this project is to utilize the technology of React to implement various features on Youtube, 
+                            <p>The main idea of this project is to utilize React to implement various features on Youtube, 
                                features included
                             </p>
                             <div>
@@ -168,7 +239,7 @@ class ProjectDetail extends React.Component {
                             <div>
                                 <ul>
                                     <li>Fetch every day inventory, order, and customer data on Amazon.</li>
-                                    <li>Manage over 10,000 prodcts sales and inventory.</li>
+                                    <li>Manage over 10,000 prodcts, sales and inventory.</li>
                                     <li>Dispay visal chart data.</li>
                                     <li>Low inventory alert.</li>
                                     <li>Generate daily, weekly, monthly and yearly report.</li>
@@ -197,7 +268,6 @@ class ProjectDetail extends React.Component {
     }
 
     render() {
-       
         return (
             <div className={classes.projectdetail}>
                 <div className="container">
