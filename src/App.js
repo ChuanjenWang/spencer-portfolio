@@ -17,6 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    //this.setState({ loading: false });
     window.addEventListener('load', this.loadHandler);
     //console.log('Home componentDidMount');
   };
@@ -27,7 +28,8 @@ class App extends Component {
 
   loadHandler = () => {
     //console.log('All resources finished loading!');
-    setTimeout(() => this.setState({ loading: false }), 1500);
+    //setTimeout(() => this.setState({ loading: false }), 1500);
+    this.setState({ loading: false });
   }
  
 
