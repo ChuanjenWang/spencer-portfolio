@@ -7,11 +7,13 @@ const Backdrop = (props) =>
     const backdropClass = props.show ? [classes.backdrop, classes.open] : [classes.backdrop];
     //const contentClass = [classes.backdrop__content, classes.overlay];
     if(props.show) {
-        //document.body.classList.add(classes.noscroll);
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add(classes.noscroll);
+        //document.body.style.overflow = 'hidden';
+        //document.getElementById('root').style.overflow = 'hidden';
     }else {
-        //document.body.classList.remove(classes.noscroll);
-        document.body.style = '';
+        document.body.classList.remove(classes.noscroll);
+        //document.body.style = '';
+        //document.getElementById('root').style = '';
     }
 
     return (

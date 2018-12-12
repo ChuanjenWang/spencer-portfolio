@@ -70,5 +70,8 @@
     transform: scale(0.1);
 }
 
-.noscroll { overflow: hidden; }
+.noscroll { 
+    position: fixed;
+    overflow: hidden; 
+}
 
