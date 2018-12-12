@@ -10,17 +10,29 @@ import Contact from './components/Layout/Contact/Contact';
 
 
 class App extends Component {
+  
+  state = {
+    loading: true
+  }
+
+  componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 1000);
+  }
+  
   render() {
-    
+    const renderApp = this.state.loading ? <div className="Loading"></div> :
+                      <div className="App">
+                      <Layout>
+                        <Home />
+                        <About />
+                        <Skills />
+                        <Portfolio />
+                        <Contact />
+                      </Layout>  
+                      </div>
     return (
-      <div className="App">
-        <Layout>  
-            <Home />
-            <About />
-            <Skills />
-            <Portfolio />
-            <Contact />
-        </Layout>
+      <div>
+        {renderApp}
       </div>
     );
   }
