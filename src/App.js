@@ -12,18 +12,30 @@ import Contact from './components/Layout/Contact/Contact';
 class App extends Component {
   
   state = {
-    loading: true
+    loading: true,
+    photoLoad: false
   }
 
   componentDidMount() {
+    window.addEventListener('load', this.loadHandler);
+    //console.log('Home componentDidMount');
+  };
+  
+  componentWillUnmount() {
+    window.removeEventListener('load', this.loadHandler);
+  };
+
+  loadHandler = () => {
+    //console.log('All resources finished loading!');
     setTimeout(() => this.setState({ loading: false }), 1500);
   }
-  
+ 
+
   render() {
     const renderApp = this.state.loading ? <div className="Loading"></div> :
                       <div className="App">
                       <Layout>
-                        <Home />
+                        <Home/>
                         <About />
                         <Skills />
                         <Portfolio />
