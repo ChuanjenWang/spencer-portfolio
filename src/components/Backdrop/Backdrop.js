@@ -9,11 +9,12 @@ const Backdrop = (props) =>
     if(props.show) {
         document.body.classList.add(classes.noscroll);
         //document.body.style.overflow = 'hidden';
-        //document.getElementById('root').style.overflow = 'hidden';
+        //document.getElementById('root').classList.add(classes.noscroll);
     }else {
         document.body.classList.remove(classes.noscroll);
         //document.body.style = '';
         //document.getElementById('root').style = '';
+        //document.getElementById('root').classList.remove(classes.noscroll);
     }
 
     return (
