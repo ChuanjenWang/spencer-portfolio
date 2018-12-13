@@ -2,22 +2,10 @@ import React from 'react';
 
 import classes from './Home.module.scss';
 import Navbar from '../../UI/Navbar/Navbar';
-class Home extends React.Component {
-    state = {
-        loading: true
-    }
+const Home = () => {
 
-    componentDidMount() {
-        setTimeout(() => this.setState({ loading: false }), 2000);
-    }
-
-    render () {
-    const loaderWrapCalss = this.state.loading ? [classes.LoaderWrap] : [classes.LoaderWrap, classes.FadeOut];
-    const loading =  <div className={loaderWrapCalss.join(' ')}><div className={classes.Loader}></div></div>;
-    
     return (
     <section id="home">
-        {loading}
         <Navbar />
         <div className={classes.BannerImage}>
             <div className={classes.Home__MainBox}>
@@ -59,6 +47,6 @@ class Home extends React.Component {
             </div> 
         </div>
     </section>
-    )}
+    )
 }
 export default Home;

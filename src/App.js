@@ -9,44 +9,29 @@ import Portfolio from './components/Layout/Portfolio/Portfolio';
 import Contact from './components/Layout/Contact/Contact';
 
 
-class App extends Component {
-  
+class App extends Component { 
   state = {
     loading: true,
-    photoLoad: false
   }
 
-  // componentDidMount() {
-  //   //this.setState({ loading: false });
-  //   //window.addEventListener('load', this.loadHandler);
-  //   //console.log('Home componentDidMount');
-  // };
-  
-  // componentWillUnmount() {
-  //   //window.removeEventListener('load', this.loadHandler);
-  // };
-
-  // closeLoaderHandler = () => {
-  //   //console.log('All resources finished loading!');
-  //   //setTimeout(() => this.setState({ loading: false }), 1500);
-  //   this.setState({ loading: false });
-  // }
- 
+  componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 2000);
+  };
 
   render() {
-    const renderApp = <div className="App">
-                      <Layout>
-                        <Home load={this.closeLoaderHandler}/>
-                        <About />
-                        <Skills />
-                        <Portfolio />
-                        <Contact />
-                      </Layout>  
-                      </div>
-    //this.state.loading ? <div className="Loading"></div> :
+    const loaderWrapCalss = this.state.loading ? ['LoaderWrap'] : ['LoaderWrap', 'FadeOut'];
+    const loading =  <div className={loaderWrapCalss.join(' ')}><div className='Loader'></div></div>;
+    
     return (
-      <div>
-        {renderApp}
+      <div className="App">
+        {loading}
+        <Layout>
+          <Home load={this.closeLoaderHandler}/>
+          <About />
+          <Skills />
+          <Portfolio />
+          <Contact />
+        </Layout>  
       </div>
     );
   }
