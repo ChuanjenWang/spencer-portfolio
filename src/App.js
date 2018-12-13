@@ -16,34 +16,34 @@ class App extends Component {
     photoLoad: false
   }
 
-  componentDidMount() {
-    //this.setState({ loading: false });
-    window.addEventListener('load', this.loadHandler);
-    //console.log('Home componentDidMount');
-  };
+  // componentDidMount() {
+  //   //this.setState({ loading: false });
+  //   //window.addEventListener('load', this.loadHandler);
+  //   //console.log('Home componentDidMount');
+  // };
   
-  componentWillUnmount() {
-    window.removeEventListener('load', this.loadHandler);
-  };
+  // componentWillUnmount() {
+  //   //window.removeEventListener('load', this.loadHandler);
+  // };
 
-  loadHandler = () => {
-    //console.log('All resources finished loading!');
-    //setTimeout(() => this.setState({ loading: false }), 1500);
-    this.setState({ loading: false });
-  }
+  // closeLoaderHandler = () => {
+  //   //console.log('All resources finished loading!');
+  //   //setTimeout(() => this.setState({ loading: false }), 1500);
+  //   this.setState({ loading: false });
+  // }
  
 
   render() {
-    const renderApp = this.state.loading ? <div className="Loading"></div> :
-                      <div className="App">
+    const renderApp = <div className="App">
                       <Layout>
-                        <Home/>
+                        <Home load={this.closeLoaderHandler}/>
                         <About />
                         <Skills />
                         <Portfolio />
                         <Contact />
                       </Layout>  
                       </div>
+    //this.state.loading ? <div className="Loading"></div> :
     return (
       <div>
         {renderApp}
