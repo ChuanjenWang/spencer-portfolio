@@ -71,7 +71,7 @@ class ProjectDetail extends React.Component {
                         <h1>Google Weather Clone</h1><span className={classes.porjectDetail__period}>Mar 2019 - Apr 2019</span>
                         <p>Built with React, Redux, D3, and Styled Components.</p>
                         <div className={classes.porjectDetail__imgbox}>
-                                <img src={require('../../../images/weather.png')} alt="google weather clone" /> 
+                                <img src={require('../../../images/GWC.png')} alt="google weather clone" /> 
                         </div>
                             <h1>About this project</h1>
                             <p>The main idea of this project is to utilize React to implement Google search and weather features, 
