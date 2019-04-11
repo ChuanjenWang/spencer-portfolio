@@ -37,7 +37,7 @@ class Portfolio extends React.Component {
         const listItemHideClass = [classes.portfolio__list__item__hide];
 
         const projectListData = [
-            {"type": "Side Project", "desc": "Google Weather Clone (Working)", "no":"GWC", "sort": "s"},
+            {"type": "Side Project", "desc": "Google Weather Clone", "no":"GWC", "sort": "s"},
             {"type": "Work", "desc": "Corporate Member Website", "no":"CRP", "sort": "w"},
             {"type": "Work", "desc": "Corporate Member CMS", "no":"CRPS", "sort": "w"},
             {"type": "Side Project", "desc": "Youtube Clone", "no":"YTC", "sort": "s"},

@@ -68,8 +68,43 @@ class ProjectDetail extends React.Component {
             case "GWC":
                 return (
                     <div className={classes.porjectDetail}>
-                        <h1>Google Weather Clone</h1><span className={classes.porjectDetail__period}>Dec 2018 - current</span>
-                        <h1>Coming soon...</h1>
+                        <h1>Google Weather Clone</h1><span className={classes.porjectDetail__period}>Mar 2019 - Apr 2019</span>
+                        <p>Built with React, Redux, D3, and Styled Components.</p>
+                        <div className={classes.porjectDetail__imgbox}>
+                                <img src={require('../../../images/weather.png')} alt="google weather clone" /> 
+                        </div>
+                            <h1>About this project</h1>
+                            <p>The main idea of this project is to utilize React to implement Google search and weather features, 
+                               features included
+                            </p>
+                            <div>
+                                <ul>
+                                    <li>Search for citys and countries with automatic suggestion keyword.</li>
+                                    <li>Disply current weather information.</li>
+                                    <li>Disply 5 day weather forecase.</li>
+                                    <li>Area Chart with weather information per 3 hours.</li>
+                                    <li>Bar Chart with clouds status per 3 hours (coming soon).</li>
+                                    <li>Wind speed and direction (coming soon).</li>
+                                </ul>
+                            </div>
+                            <h1>Technical Sheet</h1>
+                           <ul>
+                               <li>React</li>
+                               <li>Redux</li>
+                               <li>React-thunk</li>
+                               <li>D3</li>
+                               <li>Styled Components</li>
+                           </ul>
+                         <h1>Resuorce</h1>
+                         <p>View site: <a href="https://chuanjenwang.github.io/google-weather-clone/" 
+                                          rel="noopener noreferrer" 
+                                          target="_blank">https://chuanjenwang.github.io/google-weather-clone/</a></p>
+                         <p>Repository: <a href="https://github.com/ChuanjenWang/google-weather-clone"
+                                           rel="noopener noreferrer" 
+                                           target="_blank"
+                                           >https://github.com/ChuanjenWang/google-weather-clone</a>
+
+                         </p>
                     </div>
                 )
             case "CRP":
