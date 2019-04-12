@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Helmet} from 'react-helmet';
 
 import './App.scss';
 import Layout from './components/Layout/Layout';
@@ -25,12 +24,6 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Helmet>
-          <meta property="og:title" content="Spencer Wang Portfolio"/>
-          <meta property='og:image' content={require('./images/origin/banner-adventure.jpg')}/>
-          <meta property='og:description' content="Description that will show in the preview"/>
-          <meta property='og:url' content="https://spencerwang.netlify.com/" />
-        </Helmet>
         {loading}
         <Layout>
           <Home load={this.closeLoaderHandler}/>
